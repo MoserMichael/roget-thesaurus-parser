@@ -1,10 +1,21 @@
+## Roget's Thesaurus
 
-
-Parses the roget thesaurus and makes it accessible through an API.
+Parses [Roget's Thesaurus](https://en.wikipedia.org/wiki/Roget%27s_Thesaurus) and makes it accessible through an API.
 
 the text of the Roget thesaurus was downloaded from here https://archive.org/details/rogetsthesauruso10681gut
 
 Written by Michael Moser (c) 2015
+
+For usage examples see the [test](https://github.com/MoserMichael/roget-thesaurus-parser/blob/master/tests/test_roget.py)
+
+
+running the test:
+
+```
+export PYTHONPATH=`pwd`
+python3 tests/test_roget.py
+```
+
 
 ----
 

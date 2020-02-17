@@ -7,7 +7,7 @@ def read(fname):
 
 setuptools.setup(
     name = "RogetThesaurus", 
-    version = "0.0.4",
+    version = "0.0.5",
     author = "Michael Moser",
     author_email = "moser.michael@gmail.com",
     description = ("API to the Roget thesaurus"),

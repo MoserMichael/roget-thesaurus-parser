@@ -7,16 +7,15 @@ def read(fname):
 
 setuptools.setup(
     name = "RogetThesaurus", 
-    version = "0.0.3",
+    version = "0.0.4",
     author = "Michael Moser",
     author_email = "moser.michael@gmail.com",
     description = ("API to the Roget thesaurus"),
     license = "BSD",                                                                
     keywords = "natural language processing; thesaurus",
     url = "https://github.com/MoserMichael/roget-thesaurus-parser",
-    packages=[ 'rogetapi' ], 
-    #packages=setuptools.find_packages(),
-    long_description=read('README'),
+    packages=setuptools.find_packages(),
+    long_description=read('README.md'),
     long_description_content_type='text/markdown',
     classifiers=[
         "Natural Language :: English",

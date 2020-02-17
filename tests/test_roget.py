@@ -1,5 +1,3 @@
-import sys
-import traceback
 import roget
 
 
@@ -25,21 +23,21 @@ def test_lookup(rogetThesaurus):
 def test_save(rogetThesaurus):
     print(' *** test save *** ')
     with open( 'roget-out.txt', 'w' ) as f:
-        format = roget.RogetThesaususFormatterText()
-        format.show(rogetThesaurus, f)
+        fmt = roget.RogetThesaususFormatterText()
+        fmt.show(rogetThesaurus, f)
 
     with open( 'roget-struct-out.txt', 'w' ) as f:
-        format = roget.RogetThesaususFormatterText()
-        format.show(rogetThesaurus, f, roget.ROGET_NODE_CATEGORY )
+        fmt = roget.RogetThesaususFormatterText()
+        fmt.show(rogetThesaurus, f, roget.ROGET_NODE_CATEGORY )
 
     with open( 'roget-struct-with-headw.txt', 'w' ) as f:
-        format = roget.RogetThesaususFormatterText()
-        format.show(rogetThesaurus, f, roget.ROGET_NODE_CATEGORY  | roget.ROGET_NODE_HEADWORD )
+        fmt = roget.RogetThesaususFormatterText()
+        fmt.show(rogetThesaurus, f, roget.ROGET_NODE_CATEGORY  | roget.ROGET_NODE_HEADWORD )
 
 
     with open( 'roget-out.xml', 'w' ) as f:
-        format = roget.RogetThesaurusFormatterXML()
-        format.show(rogetThesaurus, f)
+        fmt = roget.RogetThesaurusFormatterXML()
+        fmt.show(rogetThesaurus, f)
 
 def test_sim( rogetThesaurus, w1, w2 ):
     (score, s ) = rogetThesaurus.semanticSimilarity( w1, w2 )

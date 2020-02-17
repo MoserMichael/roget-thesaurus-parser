@@ -8,6 +8,8 @@ Written by Michael Moser (c) 2015
 
 For usage examples see the [test](https://github.com/MoserMichael/roget-thesaurus-parser/blob/master/tests/test_roget.py)
 
+at pypi: [link](https://test.pypi.org/project/RogetThesaurus/0.0.3)
+
 
 running the test:
 

@@ -1,4 +1,4 @@
-import rogetapi as roget
+import roget
 
 
 def lookupWord( rogetThesaurus, word ):

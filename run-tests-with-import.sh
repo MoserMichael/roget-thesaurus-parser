@@ -5,7 +5,7 @@ IMPORT_NAME=`cat setup.py  | sed -n s'/.*name = "\([^"]*\)",.*$/\1/p'`
 
 pip uninstall -y RogetThesaurus  || true
 pip install -i https://test.pypi.org/simple/ RogetThesaurus --user
-python3.7 tests/test_roget.py
+python3 tests/test_roget.py
 
 
 # create empty virtual environment dir

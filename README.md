@@ -6,15 +6,14 @@ the text of the Roget thesaurus was downloaded from here https://archive.org/det
 
 Written by Michael Moser (c) 2015
 
-For usage examples see the [test](https://github.com/MoserMichael/roget-thesaurus-parser/blob/master/tests/test_roget.py)
-
 at pypi: [link](https://test.pypi.org/project/RogetThesaurus/)
 
+For usage examples see the [test](https://github.com/MoserMichael/roget-thesaurus-parser/blob/master/tests/test_roget.py)
 
 running the test:
 
 ```
-export PYTHONPATH=`pwd`
+pip install -i https://test.pypi.org/simple/ RogetThesaurus --user
 python3 tests/test_roget.py
 ```
 

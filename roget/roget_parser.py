@@ -217,7 +217,7 @@ class RogetBuilder:
 
         if self._VERBOSE != 0:
             print("parsing file: ", rpath)
-            tm = time.clock()
+            tm = time.time()
 
         root = RogetNode(ROGET_NODE_CATEGORY, 'root')
         classMatch = re.compile("^CLASS")
@@ -295,7 +295,7 @@ class RogetBuilder:
         self._resolveReference( root )
 
         if self._VERBOSE != 0:
-            tm = time.clock() - tm
+            tm = time.time() - tm
             print("time to parse file: ", tm)
 
         return RogetThesaurus(root,self._headWordIndex, self._senseIndex)
@@ -328,10 +328,10 @@ class RogetBuilder:
 
             if self._VERBOSE != 0:
                 print("Parsing from text: ", file)
-                tm = time.clock()
+                tm = time.time()
             res = self.parse()
             if self._VERBOSE != 0:
-                tm = time.clock() - tm
+                tm = time.time() - tm
                 print("time to parse from text: ", tm)
             self._storeToFile( file, res )
 
@@ -342,7 +342,7 @@ class RogetBuilder:
             #r = RogetThesaurus()
             if self._VERBOSE != 0:
                 print("Load from file: ", file)
-                tm = time.clock()
+                tm = time.time()
             curRecursionLimit = sys.getrecursionlimit()
             if curRecursionLimit < self._RECURSION_LIMIT:
                 sys.setrecursionlimit( self._RECURSION_LIMIT )
@@ -351,7 +351,7 @@ class RogetBuilder:
                 if curRecursionLimit < self._RECURSION_LIMIT:
                     sys.setrecursionlimit( curRecursionLimit )
                 if self._VERBOSE != 0:
-                    tm = time.clock() - tm
+                    tm = time.time() - tm
                 print("time to load from file: ", tm)
                 return ret
         except Exception as e:
@@ -362,7 +362,7 @@ class RogetBuilder:
         try:
             if self._VERBOSE != 0:
                 print("Storing to file: ", file)
-                tm = time.clock()
+                tm = time.time()
             curRecursionLimit = sys.getrecursionlimit()
             if curRecursionLimit < self._RECURSION_LIMIT:
                 sys.setrecursionlimit( self._RECURSION_LIMIT )
@@ -372,7 +372,7 @@ class RogetBuilder:
             if curRecursionLimit < self._RECURSION_LIMIT:
                 sys.setrecursionlimit( curRecursionLimit )
             if self._VERBOSE != 0:
-                tm = time.clock() - tm
+                tm = time.time() - tm
                 print("time to store to file: ", tm)
         except Exception as e:
             print('Error while storing thesaurus', e)

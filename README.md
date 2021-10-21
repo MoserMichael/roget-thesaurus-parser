@@ -13,10 +13,11 @@ For usage examples see the [test](https://github.com/MoserMichael/roget-thesauru
 running the test:
 
 ```
-pip install -i https://test.pypi.org/simple/ RogetThesaurus --user
+pip install RogetThesaurus
 python3 tests/test_roget.py
 ```
 
+Also see package on [pypi](https://pypi.org/project/RogetThesaurus/)
 
 ----
 

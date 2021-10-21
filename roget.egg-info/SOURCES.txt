@@ -4,7 +4,7 @@ README
 roget.egg-info
 setup.cfg
 setup.py
-roget/10681-body.txt
+roget/10681-body.py
 roget/__init__.py
 roget/roget_parser.py
 roget.egg-info/PKG-INFO

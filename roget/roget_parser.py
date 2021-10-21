@@ -210,8 +210,9 @@ class RogetBuilder:
 
             Note that that file 10681-body.txt  must be in the same directory as the script roget.py
         """
-        fpath = os.path.split( __file__ )
-        rpath = os.path.join( fpath[0], '10681-body.txt' )
+        
+
+        rpath = os.path.join(os.path.dirname(__file__), '10681-body.py' )
         if os.access( rpath, os.F_OK | os.R_OK ) ==  0:
             raise Exception("Roget thesaursus text file rpath has not been found")
 
